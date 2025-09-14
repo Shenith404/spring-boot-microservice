@@ -36,11 +36,6 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(errors);
     }
 
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<ErrorResponse> handleException(Exception e) {
-        ErrorResponse error = new ErrorResponse();
-        error.setError(e.getMessage());
-        return ResponseEntity.badRequest().body(error);
-    }
+
 }
 
